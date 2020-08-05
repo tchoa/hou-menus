@@ -1,0 +1,29 @@
+<menuDocument>
+<menu>
+	<scriptItem id="clean_subnet">
+		<insertAfter>jump</insertAfter>
+		<label>Clean Subnet</label>
+		<context>
+        <expression><![CDATA[
+		name = kwargs["node"].type().name()
+       	return (name == "subnet" or name == "geo")
+		]]></expression>
+		</context>
+		<scriptCode><![CDATA[
+import helpers as h
+h.clean_subnet(kwargs)
+		]]></scriptCode>
+	</scriptItem>
+	<scriptItem id="edit_parent_spare_parms">
+		<insertAfter>clean_subnet</insertAfter>
+		<label>Edit Parent Parameter Interface...</label>
+		<context>
+        <expression></expression>
+		</context>
+		<scriptCode><![CDATA[
+import helpers as h
+h.edit_parent_spare_parms(kwargs)
+		]]></scriptCode>
+	</scriptItem>
+</menu>
+</menuDocument>

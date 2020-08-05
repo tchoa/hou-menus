@@ -1,0 +1,63 @@
+<menuDocument>
+<menu>
+<separatorItem></separatorItem>
+<subMenu id="setup_menu_script">
+	<label>Setup Menu Script</label>
+	<insertAfter>revert_to_prev_val</insertAfter>
+<subMenu id="group_menu_script">
+    <label>Group</label>
+	
+	<scriptItem id="point_group_menu_script">
+	<label>Point Group</label>
+	<scriptPath>$HOUDINI_USER_PREF_DIR/scripts/python/menu_script.py</scriptPath>
+	<scriptArgs>pointGroups</scriptArgs>
+	</scriptItem>
+
+	<scriptItem id="edge_group_menu_script">
+	<label>Edge Group</label>
+	<scriptPath>$HOUDINI_USER_PREF_DIR/scripts/python/menu_script.py</scriptPath>
+	<scriptArgs>edgeGroups</scriptArgs>
+	</scriptItem>
+
+	<scriptItem id="prim_group_menu_script">
+	<label>Prim Group</label>
+	<scriptPath>$HOUDINI_USER_PREF_DIR/scripts/python/menu_script.py</scriptPath>
+	<scriptArgs>primGroups</scriptArgs>
+	</scriptItem>
+
+	<scriptItem id="vertex_group_menu_script">
+	<label>Vertex Group</label>
+	<scriptPath>$HOUDINI_USER_PREF_DIR/scripts/python/menu_script.py</scriptPath>
+	<scriptArgs>vertexGroups</scriptArgs>
+	</scriptItem>
+</subMenu>
+<subMenu id="attrib_menu_script">
+    <label>Attribute</label>
+	
+	<scriptItem id="point_attrib_menu_script">
+	<label>Point Attrib</label>
+	<scriptPath>$HOUDINI_USER_PREF_DIR/scripts/python/menu_script.py</scriptPath>
+	<scriptArgs>pointAttribs</scriptArgs>
+	</scriptItem>
+
+	<scriptItem id="edge_attrib_menu_script">
+	<label>Edge Attrib</label>
+	<scriptPath>$HOUDINI_USER_PREF_DIR/scripts/python/menu_script.py</scriptPath>
+	<scriptArgs>edgeAttribs</scriptArgs>
+	</scriptItem>
+
+	<scriptItem id="prim_attrib_menu_script">
+	<label>Prim Attrib</label>
+	<scriptPath>$HOUDINI_USER_PREF_DIR/scripts/python/menu_script.py</scriptPath>
+	<scriptArgs>primAttribs</scriptArgs>
+	</scriptItem>
+
+	<scriptItem id="vertex_attrib_menu_script">
+	<label>Vertex Attrib</label>
+	<scriptPath>$HOUDINI_USER_PREF_DIR/scripts/python/menu_script.py</scriptPath>
+	<scriptArgs>vertexAttribs</scriptArgs>
+	</scriptItem>
+</subMenu>
+</subMenu>
+</menu>
+</menuDocument>
