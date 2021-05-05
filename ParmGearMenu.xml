@@ -5,8 +5,8 @@
 		<label>Clean Subnet</label>
 		<context>
         <expression><![CDATA[
-       	name = kwargs["node"].type().name()
-       	return (name == "subnet" or name == "geo")
+name = kwargs["node"].type().name()
+return (name == "subnet" or name == "geo")
 		]]></expression>
 		</context>
 		<scriptCode><![CDATA[
