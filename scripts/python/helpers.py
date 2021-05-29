@@ -19,7 +19,8 @@ def clean_subnet(args):
 def edit_parent_spare_parms(args):
 	node = args['node']
 	parent = node.parent()
-	if parent.type().name() == 'subnet':
+	typename = parent.type().name()
+	if typename in ('geo', 'subnet'):
 		hou.ui.openParameterInterfaceDialog(parent)
 	else:
 		hou.ui.openTypePropertiesDialog(parent)
