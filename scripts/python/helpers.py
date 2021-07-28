@@ -1,3 +1,9 @@
+'''
+import sys
+path = hou.getenv('HOUDINI_USER_PREF_DIR')
+sys.path.append(path + '/scripts/python')
+'''
+
 import hou
 
 def clean_subnet(args):
@@ -19,8 +25,12 @@ def clean_subnet(args):
 def edit_parent_spare_parms(args):
 	node = args['node']
 	parent = node.parent()
+	while parent.isInsideLockedHDA():
+		parent = parent.parent()
 	typename = parent.type().name()
-	if typename in ('geo', 'subnet'):
+	if typename == 'obj':
+		return
+	if typename in ('geo', 'subnet') or 'solver' in typename:
 		hou.ui.openParameterInterfaceDialog(parent)
 	else:
 		hou.ui.openTypePropertiesDialog(parent)
